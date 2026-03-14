@@ -1,0 +1,48 @@
+title: a4b.ai Docs
+description: Developer documentation for a4b.ai — MCP Server, API, and SDKs
+theme: just-the-docs
+url: "https://docs.a4b.ai"
+baseurl: ""
+
+logo: "/assets/images/logo.svg"
+
+color_scheme: light
+
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+
+aux_links:
+  "a4b.ai":
+    - "https://a4b.ai"
+aux_links_new_tab: true
+
+nav_external_links:
+  - title: Privacy Policy
+    url: https://a4b.ai/en/privacy-policy
+  - title: Support
+    url: mailto:support@a4b.ai
+
+gh_edit_link: true
+gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_repository: "https://github.com/a4b-ai/docs"
+gh_edit_branch: "main"
+gh_edit_view_mode: "tree"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+back_to_top: true
+back_to_top_text: "Back to top"
+
+exclude:
+  - vendor/
+  - node_modules/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
