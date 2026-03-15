@@ -59,8 +59,8 @@ Go to **Settings → Connectors → Add custom connector**. Enter `https://a4b.a
 {
   "mcpServers": {
     "a4b-ai": {
-      "type": "http",
-      "url": "https://a4b.ai/mcp"
+      "command": "npx",
+      "args": ["mcp-remote", "https://a4b.ai/mcp"]
     }
   }
 }
