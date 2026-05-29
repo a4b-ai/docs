@@ -16,21 +16,21 @@ Real-world scenarios showing how AI assistants use a4b.ai MCP tools. Just type a
 
 ## Example 1: Browse Your Assets
 
-> Show me all assets in the Engineering workspace
+> Show me all assets in the Main Facility workspace
 
-The AI finds the Engineering workspace and lists all assets in it, showing name, inventory number, state, and assignment.
+The AI finds the Main Facility workspace and lists all assets in it, showing name, inventory number, state, and assignment.
 
-**Example response**: "The Engineering workspace has 42 assets. Here are the highlights: 20 are in use, 12 available, 5 stored, and 3 in maintenance. The most recently added is a MacBook Pro 16-inch (#5-000099), currently available."
+**Example response**: "The Main Facility workspace has 12 assets. Here are the highlights: 6 are in use, 4 available, and 2 in maintenance. They include HVAC Unit A1 (#434-000001), Backup Generator 1 (#434-000003), and Boiler System B1."
 
 ---
 
 ## Example 2: Create an Asset and Schedule Maintenance
 
-> Add a new MacBook Pro to Engineering and schedule a setup task for next week
+> Add a new air purifier to the Server Room and schedule a setup task for next week
 
-The AI creates the asset in the Engineering workspace, then schedules a maintenance task linked to it.
+The AI creates the asset in the Server Room workspace, then schedules a maintenance task linked to it.
 
-**Example response**: "Done! Created MacBook Pro 16-inch (inventory #5-000099) in Engineering and scheduled 'Initial setup and software installation' for March 20th."
+**Example response**: "Done! Created Honeywell HEPA air purifier (inventory #434-000026) in Server Room and scheduled 'Initial setup and filter installation' for next week."
 
 ---
 
@@ -68,23 +68,23 @@ The AI searches the change history for that asset and presents a timeline of mod
 
 The AI retrieves organization-wide statistics and presents a summary.
 
-**Example response**: "Here's your organization overview for Acme Corporation (Premium plan):
+**Example response**: "Here's your organization overview (Premium plan):
 
-**Assets** (42 of 500 capacity): 20 in use, 12 available, 5 stored, 3 in maintenance, 2 deleted.
+**Assets** (25 of 500 capacity): 12 in use, 7 available, 4 in maintenance, 2 stored.
 
-**Maintenance**: 15 total tasks — 8 scheduled, 2 in progress, 4 completed, 1 overdue. 3 tasks due this week, 1 due today.
+**Maintenance**: 50 total tasks — 20 scheduled, 10 in progress, 10 completed, 10 overdue.
 
-**Plan usage**: Assets 42/500 (8%), Users 8/50 (16%), Workspaces 3/5 (60%)."
+**Plan usage**: Assets 25/500 (5%), Users 1/50 (2%), Workspaces 3/5 (60%)."
 
 ---
 
 ## Example 6: Invite Team Members
 
-> Invite alice@company.com and bob@company.com to the Engineering workspace
+> Invite alice@company.com and bob@company.com to the Main Facility workspace
 
-The AI sends invitations to both email addresses for the Engineering workspace.
+The AI sends invitations to both email addresses for the Main Facility workspace.
 
-**Example response**: "Invitations sent to alice@company.com and bob@company.com for the Engineering workspace. They'll receive emails with instructions to join."
+**Example response**: "Invitations sent to alice@company.com and bob@company.com for the Main Facility workspace. They'll receive emails with instructions to join."
 
 ---
 
@@ -100,14 +100,14 @@ The AI creates a workspace with the given name in your organization.
 
 ## Example 8: Generate QR Code Labels
 
-> Generate QR codes for assets #1, #2, and #3
+> Generate QR codes for the first 3 assets
 
-The AI fetches the assets by ID and generates downloadable QR code labels for each one.
+The AI looks up the first three assets and generates a downloadable QR code label for each one.
 
 **Example response**: "Generated QR codes for 3 assets:
-1. **MacBook Pro 16-inch** (#5-000001) — QR links to asset detail page
-2. **Dell Monitor 27-inch** (#5-000002) — QR links to asset detail page
-3. **Network Switch** (#5-000003) — QR links to asset detail page
+1. **HVAC Unit A1** (#434-000001) — QR links to asset detail page
+2. **HVAC Unit A2** (#434-000002) — QR links to asset detail page
+3. **Backup Generator 1** (#434-000003) — QR links to asset detail page
 
 Each QR code encodes the asset's direct URL for quick scanning."
 
@@ -115,13 +115,13 @@ Each QR code encodes the asset's direct URL for quick scanning."
 
 ## Example 9: Manage Team Access
 
-> List all users in the Engineering workspace and remove the ones who haven't logged in since January
+> List all users in the Main Facility workspace and remove the ones who haven't logged in since January
 
 The AI lists workspace members, identifies inactive ones, and removes them after confirmation.
 
-**Example response**: "The Engineering workspace has 12 members. 3 haven't logged in since January:
+**Example response**: "The Main Facility workspace has 12 members. 3 haven't logged in since January:
 - charlie@company.com (last active Dec 15)
 - dana@company.com (last active Nov 30)
 - eve@company.com (last active Jan 2)
 
-Removed all 3 from the Engineering workspace. They still have access to other workspaces in the organization."
+Removed all 3 from the Main Facility workspace. They still have access to other workspaces in the organization."

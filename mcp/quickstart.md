@@ -125,8 +125,8 @@ Try these prompts with your AI assistant:
 | "List my assets" | Calls `list_assets` to show all assets in your organization |
 | "Show overdue maintenance tasks" | Calls `list_maintenance_tasks` with state filter |
 | "What's our organization's asset count?" | Calls `get_organization_stats` |
-| "Create a new laptop asset in Engineering workspace" | Calls `create_asset` with workspace context |
-| "Generate QR codes for assets 1, 2, 3" | Calls `generate_asset_qr_codes` |
+| "Add a new air compressor to the Main Facility workspace" | Calls `create_asset` with workspace context |
+| "Generate QR codes for the first 3 assets" | Calls `generate_asset_qr_codes` |
 
 ## Scopes
 
