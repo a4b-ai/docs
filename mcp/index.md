@@ -35,7 +35,7 @@ Works with any MCP-compatible client:
 
 - [Claude Desktop](quickstart#claude-desktop)
 - [Claude Code](quickstart#claude-code)
-- [ChatGPT](quickstart#chatgpt)
+- [ChatGPT](quickstart#chatgpt) — available in the [ChatGPT app directory](https://chatgpt.com/apps/a4b-cmms/asdk_app_69fce78ea9a48191af1a9f23dbe06314)
 - Any MCP-compatible client
 
 ## Quick Links

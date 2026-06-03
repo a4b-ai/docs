@@ -70,9 +70,21 @@ See the [Claude Desktop MCP docs](https://docs.anthropic.com/en/docs/agents-and-
 
 ## ChatGPT
 
-In ChatGPT settings, add a new MCP connection with server URL `https://a4b.ai/mcp`.
+Connect via the ChatGPT app directory — no manual configuration needed:
 
-See the [OpenAI MCP documentation](https://platform.openai.com/docs/mcp) for details.
+**[Open A4B CMMS in ChatGPT →](https://chatgpt.com/apps/a4b-cmms/asdk_app_69fce78ea9a48191af1a9f23dbe06314)**
+
+Click the link above, then authorize A4B when prompted. ChatGPT handles the OAuth flow automatically.
+
+---
+
+**Or connect manually** (if you prefer to configure the connector yourself):
+
+1. In ChatGPT, go to **Settings → Apps**.
+2. Enter `https://a4b.ai/mcp` as the connector URL.
+3. Complete OAuth authorization — select the scopes you need (`mcp_read` for queries, `mcp_write` to create or update records).
+
+For full details on scopes and the OAuth flow, see the [OpenAI MCP documentation](https://platform.openai.com/docs/mcp).
 
 ## Custom Clients
 

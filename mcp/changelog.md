@@ -9,6 +9,11 @@ description: Version history and release notes for the a4b.ai MCP server.
 
 All notable changes to the a4b.ai MCP server.
 
+## v1.1.0 — June 2026
+
+- A4B CMMS is now listed in the ChatGPT app directory. ChatGPT users can connect directly without manual connector configuration: [chatgpt.com/apps/a4b-cmms](https://chatgpt.com/apps/a4b-cmms/asdk_app_69fce78ea9a48191af1a9f23dbe06314).
+- Manual connector setup (`https://a4b.ai/mcp`) remains available for users who prefer it.
+
 ## v1.0.0 — March 2026
 
 Initial public release of the a4b.ai MCP server.
