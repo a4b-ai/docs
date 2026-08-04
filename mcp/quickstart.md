@@ -145,9 +145,12 @@ Try these prompts with your AI assistant:
 During authorization, you choose which permissions to grant:
 
 - **`mcp_read`** — Read assets, workspaces, users, maintenance tasks, stats
-- **`mcp_write`** — Create, update, and delete resources
+- **`mcp_write`** — Create, update, and delete resources, excluding permanent asset deletion
+- **`mcp_destructive`** — Permanently delete an asset and its history. Irreversible; grant only if you need it
 
 `mcp_read` is granted by default. See [Authentication](authentication#scopes) for the full tool-to-scope mapping.
+
+Most integrations need `mcp_read` and `mcp_write` only. `mcp_destructive` covers a single irreversible tool and must be requested when your client registers — see [why it is separate](authentication#why-mcp_destructive-is-separate) if you are adding it to a client that is already connected.
 
 ## Next Steps
 

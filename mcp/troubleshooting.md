@@ -24,7 +24,36 @@ Your AI client shows an authentication error or stops responding to a4b.ai reque
 
 Your AI client returns "Insufficient scope" when trying to create or update resources.
 
-**Solution**: Re-authorize with both `mcp_read` and `mcp_write` scopes. Remove the server from your client config and add it again — you'll be prompted to select scopes during authorization.
+**Solution**: Grant `mcp_write` as well as `mcp_read`. Sign in again when your client next prompts you, and select both scopes on the authorization page.
+
+Two terms are used below and they mean different things:
+
+- **Re-authorize** — sign in and approve access again, with the server still in your client's configuration. This can change *which of the scopes your client asked for* you approve.
+- **Register again** — remove the a4b.ai server from your client's configuration and add it back, so the client registers itself from scratch. This is the only way to change *which scopes your client asks for at all*.
+
+### "Insufficient scope. Required: mcp_destructive"
+
+`force_delete_asset` returns this when called. Note the tool is listed for every client, whether or not the token can use it — so seeing it in your tool list does not mean you have access.
+
+**Solution**: The client has to **register again** — re-authorizing will not work, no matter how many times you do it. Scopes are fixed when a client registers, so a client that registered before `mcp_destructive` existed has no way to be granted it.
+
+Remove the a4b.ai server from your client's configuration entirely, add it back, and select `mcp_destructive` on the authorization page.
+
+If the option still does not appear after registering again, your client does not request that scope, and there is currently no way to enable the tool from a4b.ai's side. Permanent deletion remains available in the web interface, on the asset's edit page, under "Danger zone".
+
+This is intentional. An integration that already has access to your data should not be able to gain the ability to permanently destroy it without being set up again.
+
+### Permanent deletion is refused
+
+`force_delete_asset` returns an error even though your token has `mcp_destructive`.
+
+**Solution**: Check each of these in turn.
+
+- **Confirmation mismatch** — the call must include `confirm_inventory_number` matching the asset's inventory number exactly. Read it with `get_asset` first rather than guessing; a mismatch deletes nothing.
+- **Not an administrator** — restricted to organization administrators and administrators of the workspace containing the asset, the same as in the web interface.
+- **Wrong organization or workspace** — the asset must be one your token can reach.
+
+If you meant to retire an asset rather than destroy it, use `update_asset_state` with state `deleted` instead. That keeps the asset and its history, and is reversed by setting the state back to `available` or `in_use`.
 
 ### Not authorized for a resource
 
@@ -63,6 +92,7 @@ Your AI client returns validation errors when creating or updating resources.
 2. Restart your MCP client after configuration changes
 3. Check that your config file is valid JSON
 4. Check client logs for connection errors
+5. If the tools appear but a call fails with "Insufficient scope", that is a scope issue rather than a connection one — see [Insufficient permissions](#insufficient-permissions) or, for permanent deletion, ["Insufficient scope. Required: mcp_destructive"](#insufficient-scope-required-mcp_destructive)
 
 ### OAuth popup doesn't appear
 

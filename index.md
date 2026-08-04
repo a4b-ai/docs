@@ -11,7 +11,7 @@ Welcome to the developer documentation for **a4b.ai** — the AI-powered asset m
 <div class="doc-cards" markdown="0">
   <a href="/mcp/" class="doc-card">
     <div class="doc-card-title">MCP Server</div>
-    <p>Connect AI assistants like Claude and ChatGPT to your asset management data via the Model Context Protocol. 23 tools, 6 resource templates, OAuth 2.1 security.</p>
+    <p>Connect AI assistants like Claude and ChatGPT to your asset management data via the Model Context Protocol. 24 tools, 9 resource templates, OAuth 2.1 security.</p>
   </a>
   <div class="doc-card doc-card--disabled" aria-disabled="true" aria-label="REST API - coming soon">
     <div class="doc-card-title">REST API <span class="coming-soon-badge">Coming Soon</span></div>

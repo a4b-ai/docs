@@ -20,13 +20,13 @@ The **Model Context Protocol** (MCP) is an open standard that enables AI assista
 
 Tools are actions that an AI assistant can invoke. They accept parameters and return results. For example, `list_assets` is a tool that returns a paginated list of assets.
 
-a4b.ai exposes 23 tools covering assets, workspaces, maintenance tasks, users, invites, and QR code generation.
+a4b.ai exposes 24 tools covering assets, workspaces, maintenance tasks, users, invites, and QR code generation.
 
 ### Resources
 
 Resources are read-only data endpoints that AI clients can browse by URI. They provide context without requiring specific parameters. For example, `a4b://stats` returns organization-wide statistics.
 
-a4b.ai exposes 6 resource templates via `a4b://` URIs.
+a4b.ai exposes 9 resource templates via `a4b://` URIs.
 
 ### Transport
 

@@ -2,7 +2,7 @@
 title: MCP Server
 nav_order: 1
 has_children: true
-description: Connect AI assistants to your asset management data via the Model Context Protocol — 23 tools, OAuth 2.1 security.
+description: Connect AI assistants to your asset management data via the Model Context Protocol — 24 tools, OAuth 2.1 security.
 ---
 
 # MCP Server
@@ -16,11 +16,11 @@ The a4b.ai MCP Server provides AI assistants with secure, real-time access to yo
 
 | Feature | Details |
 |---------|---------|
-| **23 Tools** | Assets, workspaces, maintenance tasks, users, invites, QR codes |
-| **6 Resource Templates** | Browsable read-only data via `a4b://` URIs |
+| **24 Tools** | Assets, workspaces, maintenance tasks, users, invites, QR codes |
+| **9 Resource Templates** | Browsable read-only data via `a4b://` URIs |
 | **OAuth 2.1 + PKCE** | Industry-standard security, no client secrets needed |
 | **Multi-Tenant** | Organization-scoped access tokens |
-| **Audit Logging** | Every tool call logged for compliance (90-day retention) |
+| **Audit Logging** | Every tool call logged for compliance (90-day retention; [permanent-deletion entries are not pruned](security#permanent-deletion)) |
 | **Dynamic Client Registration** | [MCP spec](https://modelcontextprotocol.io/specification/2025-03-26/basic/authorization#dynamic-client-registration)-compliant automated onboarding |
 
 ## Who Is This For?
